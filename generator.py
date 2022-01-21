@@ -28,14 +28,9 @@ def maker(background_index, body_index, eye_index, mouth_index, ornament_index, 
         final, mouth_trans).save("images/final_b.png")
     os.remove("images/final_a.png")
 
-    '''
     final = Image.open("images/final_b.png")
     ornament_trans = Image.new("RGBA", final.size)
-    ornament_trans.paste(ornament, (455, 20), mask=ornament,)
+    ornament_trans.paste(ornament, (375, 20), mask=ornament,)
     Image.alpha_composite(
         final, ornament_trans).save(f"images/final{final_file_number}.png")
     os.remove("images/final_b.png")
-    '''
-
-
-maker(5, 4, 1, 3, 2, 69)
